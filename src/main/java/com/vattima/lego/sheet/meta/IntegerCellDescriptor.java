@@ -11,7 +11,7 @@ public class IntegerCellDescriptor implements CellDescriptor<Optional<Integer>> 
                 .ofNullable(v)
                 .filter(Integer.class::isInstance)
                 .map(Integer.class::cast)
-                .orElse(Optional
+                .orElseGet(() -> Optional
                         .ofNullable(v)
                         .filter(String.class::isInstance)
                         .map(String.class::cast)
