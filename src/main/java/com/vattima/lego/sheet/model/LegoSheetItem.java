@@ -17,8 +17,10 @@ public class LegoSheetItem {
 
     @Override
     public String toString() {
-        return "LegoSheetItem{" +
-                "row=" + row +
+        return """
+                LegoSheetItem{\
+                row=\
+                """ + row +
                 ", box='" + box + '\'' +
                 ", itemNumber='" + itemNumber + '\'' +
                 ", sealed=" + sealed +

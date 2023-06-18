@@ -12,11 +12,11 @@ import com.vattima.lego.sheet.meta.IntegerCellDescriptor;
 import com.vattima.lego.sheet.meta.StringCellDescriptor;
 import com.vattima.lego.sheet.model.LegoSheetItem;
 import org.assertj.core.api.Assertions;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mockito;
-import org.mockito.junit.MockitoJUnitRunner;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.io.IOException;
 import java.util.Arrays;
@@ -24,14 +24,14 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-@RunWith(MockitoJUnitRunner.class)
-public class LegoItemSheetServiceTest {
+@ExtendWith(MockitoExtension.class)
+class LegoItemSheetServiceTest {
     private LegoItemSheetProperties legoItemSheetProperties;
     private GoogleSheetsService googleSheetsService;
     private ValueRange valueRange;
 
-    @Before
-    public void setup() {
+    @BeforeEach
+    void setup() {
         legoItemSheetProperties = new LegoItemSheetProperties();
 
         legoItemSheetProperties.setId("1");
@@ -57,7 +57,7 @@ public class LegoItemSheetServiceTest {
     }
 
     @Test
-    public void getLegoItems_returnsNonEmptyList() {
+    void getLegoItems_returnsNonEmptyList() {
         valueRange.setValues(
                 Arrays.asList(
                         Arrays.asList(1, "Box 1", "1234", null, 1, null),

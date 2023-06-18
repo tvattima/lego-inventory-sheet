@@ -1,13 +1,13 @@
 package com.vattima.lego.sheet.meta;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class BooleanCellDescriptorTest {
+class BooleanCellDescriptorTest {
 
     @Test
-    public void test_withTrueValues_areTrue() {
+    void test_withTrueValues_areTrue() {
         BooleanCellDescriptor booleanCellDescriptor = new BooleanCellDescriptor();
         Object o = "x";
         booleanCellDescriptor.setValue(o);
@@ -30,7 +30,7 @@ public class BooleanCellDescriptorTest {
     }
 
     @Test
-    public void test_withNoTrueValues_areFalse() {
+    void test_withNoTrueValues_areFalse() {
         BooleanCellDescriptor booleanCellDescriptor = new BooleanCellDescriptor();
         Object o = null;
         booleanCellDescriptor.setValue(o);

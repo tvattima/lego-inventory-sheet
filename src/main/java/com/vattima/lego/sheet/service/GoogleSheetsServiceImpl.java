@@ -16,7 +16,6 @@ import com.vattima.lego.sheet.configuration.LegoItemSheetProperties;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
-import javax.annotation.PostConstruct;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
@@ -36,7 +35,6 @@ public class GoogleSheetsServiceImpl implements GoogleSheetsService {
     private HttpTransport httpTransport;
     private JsonFactory jsonFactory;
 
-    @PostConstruct
     public void initialize() {
         // Load client secrets.
         InputStream in = LegoItemSheetService.class.getResourceAsStream(legoItemSheetProperties.getClientSecretDir());

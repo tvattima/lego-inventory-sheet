@@ -1,7 +1,7 @@
 package com.vattima.lego.sheet.meta;
 
 import org.assertj.core.api.Assertions;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.NoSuchElementException;
 import java.util.Optional;
@@ -9,10 +9,10 @@ import java.util.Optional;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
-public class IntegerCellDescriptorTest {
+class IntegerCellDescriptorTest {
 
     @Test
-    public void test_setAsValidInteger_returnsInteger() {
+    void test_setAsValidInteger_returnsInteger() {
         IntegerCellDescriptor integerCellDescriptor = new IntegerCellDescriptor();
 
         integerCellDescriptor.setValue(123);
@@ -29,7 +29,7 @@ public class IntegerCellDescriptorTest {
     }
 
     @Test
-    public void test_setAsValidIntegerString_returnsInteger() {
+    void test_setAsValidIntegerString_returnsInteger() {
         IntegerCellDescriptor integerCellDescriptor = new IntegerCellDescriptor();
 
         integerCellDescriptor.setValue("123");
@@ -58,7 +58,7 @@ public class IntegerCellDescriptorTest {
     }
 
     @Test
-    public void test_setAsNull_returnsNull() {
+    void test_setAsNull_returnsNull() {
         IntegerCellDescriptor integerCellDescriptor = new IntegerCellDescriptor();
 
         Integer expectedValue = null;

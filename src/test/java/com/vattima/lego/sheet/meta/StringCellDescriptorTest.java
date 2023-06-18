@@ -1,15 +1,15 @@
 package com.vattima.lego.sheet.meta;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.Date;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class StringCellDescriptorTest {
+class StringCellDescriptorTest {
 
     @Test
-    public void test_setNonNullValue_convertsToString() {
+    void test_setNonNullValue_convertsToString() {
         StringCellDescriptor stringCellDescriptor = new StringCellDescriptor();
 
         stringCellDescriptor.setValue("");
@@ -43,7 +43,7 @@ public class StringCellDescriptorTest {
     }
 
     @Test
-    public void test_setNullValue_convertsToEmptyString() {
+    void test_setNullValue_convertsToEmptyString() {
         StringCellDescriptor stringCellDescriptor = new StringCellDescriptor();
 
         String nullString = null;
