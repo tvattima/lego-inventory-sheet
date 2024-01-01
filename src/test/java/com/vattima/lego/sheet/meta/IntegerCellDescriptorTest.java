@@ -12,7 +12,7 @@ import static org.assertj.core.api.Assertions.assertThatThrownBy;
 class IntegerCellDescriptorTest {
 
     @Test
-    void test_setAsValidInteger_returnsInteger() {
+    void setAsValidInteger_returnsInteger() {
         IntegerCellDescriptor integerCellDescriptor = new IntegerCellDescriptor();
 
         integerCellDescriptor.setValue(123);
@@ -29,7 +29,7 @@ class IntegerCellDescriptorTest {
     }
 
     @Test
-    void test_setAsValidIntegerString_returnsInteger() {
+    void setAsValidIntegerString_returnsInteger() {
         IntegerCellDescriptor integerCellDescriptor = new IntegerCellDescriptor();
 
         integerCellDescriptor.setValue("123");
@@ -58,7 +58,7 @@ class IntegerCellDescriptorTest {
     }
 
     @Test
-    void test_setAsNull_returnsNull() {
+    void setAsNull_returnsNull() {
         IntegerCellDescriptor integerCellDescriptor = new IntegerCellDescriptor();
 
         Integer expectedValue = null;

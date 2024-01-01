@@ -7,7 +7,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 class BooleanCellDescriptorTest {
 
     @Test
-    void test_withTrueValues_areTrue() {
+    void withTrueValues_areTrue() {
         BooleanCellDescriptor booleanCellDescriptor = new BooleanCellDescriptor();
         Object o = "x";
         booleanCellDescriptor.setValue(o);
@@ -30,7 +30,7 @@ class BooleanCellDescriptorTest {
     }
 
     @Test
-    void test_withNoTrueValues_areFalse() {
+    void withNoTrueValues_areFalse() {
         BooleanCellDescriptor booleanCellDescriptor = new BooleanCellDescriptor();
         Object o = null;
         booleanCellDescriptor.setValue(o);

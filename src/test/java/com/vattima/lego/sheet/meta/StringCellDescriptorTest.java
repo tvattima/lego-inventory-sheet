@@ -9,7 +9,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 class StringCellDescriptorTest {
 
     @Test
-    void test_setNonNullValue_convertsToString() {
+    void setNonNullValue_convertsToString() {
         StringCellDescriptor stringCellDescriptor = new StringCellDescriptor();
 
         stringCellDescriptor.setValue("");
@@ -43,7 +43,7 @@ class StringCellDescriptorTest {
     }
 
     @Test
-    void test_setNullValue_convertsToEmptyString() {
+    void setNullValue_convertsToEmptyString() {
         StringCellDescriptor stringCellDescriptor = new StringCellDescriptor();
 
         String nullString = null;
